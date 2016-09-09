@@ -12,8 +12,8 @@ import time
 DB_HOST = 'localhost'
 DB_USER = 'cdrlog'
 DB_PASS = 'miJtwCsYIxNA4nR'
-DB_NAME = 'dinstar'
-LOG_DIR = '/var/log/dinstar/cdr'
+DB_NAME = 'huawei'
+LOG_DIR = '/var/log/huawei/cdr'
 current_time = str(datetime.datetime.now() - datetime.timedelta(minutes=10)).split()[0]
 LOG_FILENAME = current_time + '.cdr'
 SQL_TABLE = current_time.rsplit('-',1)[0]
@@ -26,12 +26,12 @@ list_1000=[]
 
 
 def send_error(msg):
-    username = 'bjduty@cvtt.cn'
-    to_list = ['yuyipeng@cvtt.cn']
+    username = 'xxxxx@xxx.com'
+    to_list = ['xxx@xxx.com']
     sub = 'MTG CDR Storage failed !'
     mail = smtplib.SMTP()
-    mail.connect('mail.cvtt.cn')
-    mail.login(username, 'CVT@(95013)')
+    mail.connect('smtp.qq.com')
+    mail.login(username, 'xxxxxxx')
     body = '\r\n'.join((
         'From:%s' % username,
         'To:%s' % to_list,
